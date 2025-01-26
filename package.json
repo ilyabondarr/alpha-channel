@@ -1,16 +1,15 @@
 {
-  "name": "alpha-chanel",              
-  "version": "1.0.0",                
+  "name": "alpha-chanel",
+  "version": "1.0.0",
   "description": "Пример проекта на Webpack с API",
-  "main": "server.js",                   
+  "main": "server.js",
   "scripts": {
-    "build": "webpack",                  
+    "build": "webpack",
     "start": "webpack serve --mode development",
-    "dev": "webpack --mode development"    
-       
+    "dev": "webpack --mode development"
   },
-  "author": "Ваше имя",                
-  "license": "ISC",                       
+  "author": "Ваше имя",
+  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.26.7",
     "@babel/preset-env": "^7.26.7",
@@ -25,5 +24,11 @@
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
   }
 }

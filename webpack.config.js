@@ -17,7 +17,7 @@ module.exports = {
   output: {
     filename: `js/${filename("js")}`, // Убедитесь, что здесь нет './'
     path: path.resolve(__dirname, "app"),
-    publicPath: "./", // Установите это значение
+    publicPath: "/", // Установите это значение
     assetModuleFilename: path.join("assets", "[hash][ext][query]"),
   },
   devServer: {
@@ -28,7 +28,7 @@ module.exports = {
     open: true,
     compress: true,
     hot: false,
-    port: 3001,
+    port: 3003,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -38,6 +38,20 @@ module.exports = {
         collapseWhitespace: isProd,
       },
     }),
+    new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, "src", "manager.html"),
+        filename: "manager.html",
+        minify: {
+          collapseWhitespace: isProd,
+        },
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, "src", "work-panel.html"),
+        filename: "work-panel.html",
+        minify: {
+          collapseWhitespace: isProd,
+        },
+      }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `css/${filename("css")}`, // Тоже убираем './'

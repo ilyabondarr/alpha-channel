@@ -19,7 +19,7 @@ h1 {
   color: #5e00ff;
 }
 h2 {
-  font-family: var(--font-family);
+  font-family: "Roboto";
   font-weight: 700;
   font-size: 40px;
   line-height: 100%;
@@ -59,7 +59,7 @@ h2 {
 .hero {
   margin-bottom: 80px;
   &__text {
-    font-family: var(--font-family);
+    font-family: "Roboto";
     font-weight: 700;
     font-size: 32px;
     line-height: 112%;
@@ -74,18 +74,18 @@ h2 {
   }
 }
 .change-data {
-    padding-bottom: 80px;
+  padding-bottom: 80px;
   &__form {
-    border: 2px solid #000;
+    border: 2px solid #ff7403;
     border-radius: 12px;
     width: 100%;
     min-height: 328px;
-    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
     background: #fff;
     padding: 43px 54px;
     position: relative;
   }
-  &__title{
+  &__title {
     margin-bottom: 50px;
   }
   &__form-input {
@@ -104,7 +104,7 @@ h2 {
     margin-bottom: 11px;
   }
   &__form-text {
-    font-family: var(--font-family);
+    font-family: "Roboto";
     font-weight: 700;
     font-size: 16px;
     line-height: 75%;
@@ -121,6 +121,15 @@ h2 {
     height: 31px;
     background: #5e00ff;
     color: #fff;
+  }
+  &__textarea{
+    width: 584px;
+    height: 119px;
+    border: 1px solid #ff7403;
+    border-radius: 12px;
+    resize: none;
+    padding-left: 7px;
+    padding-top: 13px;
   }
 }
 .file-input {
@@ -140,68 +149,119 @@ h2 {
   border-radius: 12px;
 }
 .change-data__radio-buttons {
-    display: flex; /* Используем flexbox для выравнивания */
-    gap: 10px; /* Расстояние между кнопками */
+  display: flex; /* Используем flexbox для выравнивания */
+  gap: 10px; /* Расстояние между кнопками */
 }
 
 input[type="radio"] {
-    display: none; /* Скрываем стандартный radio input */
+  display: none; /* Скрываем стандартный radio input */
 }
 
 .custom-radio {
-    width: 11px; /* Ширина радиокнопки */
-    height: 11px; /* Высота радиокнопки */
-    border: 2px solid #000; /* Цвет обводки */ 
-    border-radius: 50%; /* Делает элемент кругом */
-    position: relative; /* Для позиционирования внутреннего кружка */
-    cursor: pointer; /* Указатель в виде руки */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 11px; /* Ширина радиокнопки */
+  height: 11px; /* Высота радиокнопки */
+  border: 2px solid #000; /* Цвет обводки */
+  border-radius: 50%; /* Делает элемент кругом */
+  position: relative; /* Для позиционирования внутреннего кружка */
+  cursor: pointer; /* Указатель в виде руки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .custom-radio::after {
-    content: "";
-    width: 6px; /* Размер внутреннего оранжевого кружка */
-    height: 6px; /* Размер внутреннего оранжевого кружка */
-    background-color: #ff7403; /* Цвет внутреннего кружка */
-    border-radius: 50%; /* Делаем внутренний кружок круглым */
-    position: absolute; /* Позиция относительно внешнего круга */
-    opacity: 0; /* По умолчанию скрыт */
-    transition: opacity 0.2s; /* Плавный переход */
+  content: "";
+  width: 6px; /* Размер внутреннего оранжевого кружка */
+  height: 6px; /* Размер внутреннего оранжевого кружка */
+  background-color: #ff7403; /* Цвет внутреннего кружка */
+  border-radius: 50%; /* Делаем внутренний кружок круглым */
+  position: absolute; /* Позиция относительно внешнего круга */
+  opacity: 0; /* По умолчанию скрыт */
+  transition: opacity 0.2s; /* Плавный переход */
 }
 
 input[type="radio"]:checked + .custom-radio::after {
-    opacity: 1; /* Показываем внутренний кружок, когда radio выбрана */
+  opacity: 1; /* Показываем внутренний кружок, когда radio выбрана */
 }
 
 label {
-    cursor: pointer; /* Указатель в виде руки */
+  cursor: pointer; /* Указатель в виде руки */
 }
-#map{
+#map {
+  width: 100%;
+  height: 500px; /* Высота карты */
+  margin-bottom: 50px;
+}
+.marker-form__subtitle {
+  margin-bottom: 30px;
+}
+.marker-form {
+  &__input {
+    max-width: 400px;
     width: 100%;
-    height: 500px; /* Высота карты */
-    margin-bottom: 50px;
+    height: 40px;
+    padding-left: 7px;
+    color: #000;
+    border: 1px solid #ff7403;
+    border-radius: 12px;
+  }
+  &__button {
+    width: 200px;
+    height: 40px;
+    background: #5e00ff;
+    border-radius: 12px;
+    color: #fff;
+    margin-top: 30px;
+  }
 }
-.marker-form__subtitle{
-    margin-bottom: 30px;
+.footer {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    max-width: 50px;
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__flex {
+    display: flex;
+    column-gap: 36px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 50%;
+    letter-spacing: 0.12em;
+    color: #000;
+    margin-bottom: 6px;
+  }
+  &__left{
+    display: flex;
+    column-gap: 31px;
+  }
+  &__link:hover{
+    color: #ff7403;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 60%;
+    letter-spacing: 0.15em;
+    color: #000;
+    transition: color .3s ease-in-out;
+  }
+  &__link:not(:last-child) {
+    margin-bottom: 7px;
+  }
 }
-.marker-form{
-    &__input{
-        max-width: 400px;
-        width: 100%;
-        height: 40px;
-        padding-left: 7px;
-        color: #000;
-        border: 1px solid #ff7403;
-        border-radius: 12px;
-    }
-    &__button{
-        width: 200px;
-        height: 40px;
-        background: #5e00ff;
-        border-radius: 12px;
-        color: #fff;
-        margin-top: 30px;
-    }
+#manager-form{
+    padding: 43px 162px;
+}
+.change-data__submit--right{
+    right: 162px;
 }
