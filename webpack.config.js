@@ -6,17 +6,18 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
 
+// Упростите имя файла
 const filename = (ext) =>
-  isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+  isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`; // Убираем './'
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
   entry: path.resolve(__dirname, "src", "js", "main.js"),
   output: {
-    filename: path.join("js", filename("js")),
+    filename: `js/${filename("js")}`, // Убедитесь, что здесь нет './'
     path: path.resolve(__dirname, "app"),
-    publicPath: "/",
+    publicPath: "./", // Установите это значение
     assetModuleFilename: path.join("assets", "[hash][ext][query]"),
   },
   devServer: {
@@ -39,7 +40,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: path.join("css", filename("css")),
+      filename: `css/${filename("css")}`, // Тоже убираем './'
     }),
   ],
   module: {
