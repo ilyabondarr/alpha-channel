@@ -80,7 +80,7 @@ eval("module.exports = __webpack_require__.p + \"assets\\\\656224b9fe0ed3bf76ec.
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/";
+/******/ 		__webpack_require__.p = "./";
 /******/ 	})();
 /******/ 	
 /************************************************************************/

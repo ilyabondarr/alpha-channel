@@ -17,7 +17,7 @@ module.exports = {
   output: {
     filename: `js/${filename("js")}`, // Убедитесь, что здесь нет './'
     path: path.resolve(__dirname, "app"),
-    publicPath: "/", // Установите это значение
+    publicPath: "./", // Установите это значение
     assetModuleFilename: path.join("assets", "[hash][ext][query]"),
   },
   devServer: {
