@@ -30,7 +30,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "../assets/label.png":
+/***/ "./assets/label.png":
 /*!**************************!*\
   !*** ./assets/label.png ***!
   \**************************/
@@ -80,7 +80,7 @@ eval("module.exports = __webpack_require__.p + \"assets\\\\656224b9fe0ed3bf76ec.
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/";
+/******/ 		__webpack_require__.p = "./";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
