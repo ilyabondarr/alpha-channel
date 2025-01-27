@@ -365,3 +365,24 @@ label {
 .change-data__submit--right {
   right: 162px;
 }
+
+#modal-info {
+  display: none;
+  max-width: 250px;
+  padding: 16px 22px;
+  border: 1px solid #000;
+  border-radius: 12px;
+}
+
+.modal-info__text {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 142%;
+  letter-spacing: 0.12em;
+  color: #000;
+}
+
+.modal-info__text-regular {
+  font-weight: 400;
+}
